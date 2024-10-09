@@ -232,3 +232,24 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.horizontal-slider{
+    height: 400px;
+    color: #fff;
+}    
+.heading-slider{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+.swiper-container{
+
+}
+.swiper-slide{
+    width: 200px;
+    height: 130px;
+}
+.swiper-slide-movie{
+    width: 200px;
+    height: 130px;
+}
