@@ -1,0 +1,8 @@
+:root{
+    --fontSize_heading1_mobile: 16px;
+    --fontSize_heading3_mobile: 10px;
+    --fontSize_text_mobile:10px;
+    --fontSize_heading1_PC: 22px;
+    --fontSize_heading3_PC: 22px;
+    --color_main: rgb(255,150,1)
+}

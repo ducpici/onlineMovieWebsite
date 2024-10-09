@@ -1,0 +1,141 @@
+.main-content-block-heading{
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-content-block-heading-h1{
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(222,150,1);
+}
+.main-content-block-heading-list{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+.main-content-block-heading-list-item{
+    margin: 5px 5px;
+}
+.main-content-block-heading-list-item-form-control{
+    width: 145px;
+    height: 35px;    
+    border: 1px solid gray;
+    background-color: rgb(48, 48, 48);
+    border-radius: 5px;
+    padding-left: 5px;
+    color: white;
+}
+.main-content-block-heading-list-item-form-control:focus{
+    border: 1px solid rgb(102, 175, 233);
+}
+.main-content-block-heading-list-item-button-search{
+    height: 100%;
+    padding: 0 20px;
+    border: none;
+    border-radius: 5px;
+}
+.main-content-block-text{
+    height: auto;
+    background-color: rgb(48, 46, 46);
+    display: flex;
+    flex-direction: column;
+}
+.main-content-block-text-title{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(37, 37, 37);
+    margin: 10px;
+}
+.main-content-block-text-title-item{
+    list-style: none;
+    padding: 5px 5px;
+}
+.main-content-block-text-title-item-link{
+    text-decoration: none;
+    color: #fff;
+}
+.main-content-block-text-des{
+    margin: 0 10px 20px 10px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(66, 62, 62);
+}
+.main-content-block-text-des-p{
+    color: #fff;
+    font-size: 14px;
+    margin: 20px;
+    padding: 10px;
+    text-align: justify;
+}
+.hight-light-text-color{
+    color: rgb(222,150,1);
+}
+.main-content-block-listFilm-item:hover{
+    top:-5px
+}
+.main-content-block-listFilm-item-label{
+    position: absolute;
+    background-image: linear-gradient(to right, rgb(192, 36, 37) , rgb(238, 195, 52));
+    border-radius: 2px;
+    padding: 3px;
+    z-index: 1;
+    font-size: 12px;
+    color: #fff;
+}
+.main-content-block-listFilm-item-link{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex
+}
+.main-content-block-listFilm-item-link-img{
+    width: 100%;
+    height: 100%;
+}
+.main-content-block-listFilm-item-link-h3{
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: rgb(0, 0, 0, 0.3);
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.pagnitation{
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+.pagnitation-list{
+    display: flex;
+    list-style: none;
+}
+.pagnitation-item{
+    margin: 5px;
+}
+.pagnitation-item-link{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    min-width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid gray;
+    background-color: rgb(58, 58, 58);
+    font-weight: 600;
+    font-size: 14px;
+}
+.pagnitation-item-link:hover{
+    color: rgb(255,150,1);
+    border-color: rgb(255,150,1);
+
+}

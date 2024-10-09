@@ -1,0 +1,234 @@
+:root {
+    --fontWeigh_header: 450;
+    --fontSize_header: 1rem;
+    --text-color: rgb(255, 150, 1)
+}
+.text-color-orrange{
+    color: var(--text-color);
+}
+.block-item-link{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex
+}
+.block-item-link-img{
+    width: 100%;
+    height: 100%;
+}
+.block-item-link-h3{
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: rgb(0, 0, 0, 0.3);
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+}
+.block-item:hover{
+    top:-5px
+}
+.main-content-slider{
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+.main-content-slider-show{
+    display: flex;
+    height: 100%;
+    transition: 0.5s;
+}
+.main-content-slider-item{
+    background-size:cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+.main-content-slider-item-img{
+    width: 1380px;
+    height: 100%;
+}
+.movie-detail-item{
+    margin-right: 20px;
+}
+.main-content-slider-item-infoFilm{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 500px;
+    height: auto;
+    padding: 30px;
+    background: transparent;
+    z-index: 1;
+}
+.movie_banner_actions{
+    display: flex;
+}
+.movie_banner_action{
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.movie_banner_action-icon{
+    font-size: 20px;
+}
+.banner_action_watch{
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 185px;
+    height: 50px;
+    background-color:rgb(255, 88, 51);
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.main-content-slider-btn{
+    position: absolute;
+    top: 50%;
+    padding: 10px;
+    transform: translateY(-50%);
+}
+.btn-handle-left{
+    left: 0;
+}
+
+.btn-handle-right{
+    right: 0;
+}
+.btn-handle{
+    font-size: 25px;
+    color: #999;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.btn-handle:hover{
+    color: #fff;
+}
+
+.main-content-slider-listFilm{
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+.main-content-slider-listFilm-wrapper{
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    scrollbar-width: none;
+}
+.icon-prev{
+    position: absolute;
+    color: rgb(255, 150, 1,0.6);
+    left: 10px;
+    top: 50%;
+    z-index: 1;
+}
+.icon-next{
+    position: absolute;
+    color: rgb(255, 150, 1,0.6);
+    right: 10px;
+    top:50%;
+    z-index: 1;
+}
+.main-content-block{
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    position: relative;
+}
+.main-content-block-heading{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+}
+.main-content-block-heading-title{
+    margin:0 50px 0 0;
+    text-decoration: none;
+    color: var(--text-color);
+
+}
+.main-content-block-heading-title-h3{
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+.main-content-block-heading-list{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 10px 0;
+    list-style: none;
+    align-items: center;
+}
+.main-content-block-heading-list-item{
+    margin: 5px
+}
+.main-content-block-heading-list-item-link{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    background-color: rgb(80, 77, 73);
+}
+.main-content-block-heading-list-item-link:hover{
+    background-color: var(--text-color);
+}
+.main-content-block-heading-seeMore{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+    background-color: rgb(80, 77, 73);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.main-content-block-listFilm-item:hover{
+    top:-5px
+}
+.main-content-block-listFilm-item-label{
+    position: absolute;
+    background-image: linear-gradient(to right, rgb(192, 36, 37) , rgb(238, 195, 52));
+    border-radius: 2px;
+    padding: 3px;
+    z-index: 1;
+    font-size: 12px;
+    color: #fff;
+}
+.main-content-block-listFilm-item-link{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex
+}
+.main-content-block-listFilm-item-link-img{
+    width: 100%;
+    height: 100%;
+}
+.main-content-block-listFilm-item-link-h3{
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: rgb(0, 0, 0, 0.3);
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

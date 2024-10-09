@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    scrollbar-width:thin;
+}
+body{
+    width: 100%;
+    height: auto;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+.app{
+    width: 100%;
+    height: auto;
+    background-color: rgb(26, 26, 26);
+}
+.main {
+    padding:0 10px;
+    background-color: rgb(26, 26, 26);
+    width: 100%;
+    min-height: 100vh;
+}
+.main-content {
+    max-width: 1380px;
+    margin: 0 auto;
+}
+.menu-list{
+    transform: translateX(-100%);
+    list-style: none;
+    position: fixed;
+    height: 80%;
+    z-index: 2;
+    right: 0;
+    left: 0;  
+    background-color: rgb(26, 26, 26);
+}
+.menu-list-item-link{
+    text-decoration: none;
+    color: #fff;
+}
+.header {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(18, 18, 18);
+}
+.header-logo{
+    display: flex;
+    align-items: center;
+}
+.header-logo-img{
+    width: 140px;
+}
+.header-navbar{
+    display: flex;
+}
+.header-navbar {
+    max-width: 1380px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.header-menu-list-item-link__color-orrange{
+    color: rgb(255, 150, 1);
+}
+.icon-dropdown{
+    margin-left: 5px;
+}
+.dropdown-list-item-link{
+    margin: 5px;
+    font-size: 0.9rem;
+    color: #fff;
+    text-decoration: none;
+}
+.dropdown-list-item-link:hover{
+    color: rgb(255, 150, 1);
+}
+.dropdown-active{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    z-index: 1;
+}
+.header-form_search-input::placeholder {
+    color: white;
+    font-size: 14px;
+}
+.header-form_search-input:focus {
+    outline: none;
+}
+.header-form_search-icon {
+    color: #fff;
+    position: absolute;
+    right: 5px;
+}
+.header-right{
+    display: flex;
+}
+.header-user{
+    display: flex;
+    align-items: center;
+}
+.profile-name{
+    margin: 0 5px;
+    color: #fff;
+}
+.profile-avatar{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-size: cover;
+}
+.user-dropdown{
+    display: none;
+    width: 100px;
+    height: 160px;
+    background-color: #fff;
+    color: #000;
+}
+.display-block{
+    display: block;
+}
+
