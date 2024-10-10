@@ -13,16 +13,16 @@ const icon_right=document.querySelector('icon-right')
 
 const length=items_slider.length
 
-// let index=0
-// setInterval(function(){
-//     if(index == length-1){
-//         index=0
-//         slider_show.style=`transform: translateX(${-1*slider.offsetWidth*index}px);`
-//     }else{
-//         index++
-//         slider_show.style=`transform: translateX(${-1*slider.offsetWidth*index}px);`
-//     }
-// }, 3000)
+let index=0
+setInterval(function(){
+    if(index == length-1){
+        index=0
+        slider_show.style=`transform: translateX(${-1*slider.offsetWidth*index}px);`
+    }else{
+        index++
+        slider_show.style=`transform: translateX(${-1*slider.offsetWidth*index}px);`
+    }
+}, 3000)
 
 
 
