@@ -1,0 +1,23 @@
+:root{
+    --main-color: #FF9601
+}
+
+.font-weigh-semibold{
+    font-weight: 600;
+}
+
+.main-color{
+    color: var(--main-color);
+}
+
+.heading1{
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.heading2{
+    font-size: 18px;
+}
+.heading3{
+    font-size: 16px;
+}
