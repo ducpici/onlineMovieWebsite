@@ -1,0 +1,44 @@
+.form-search{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: rgb(21,21,21);
+    padding: 15px 10px;
+}
+.form-search *{
+    margin: 0 5px;
+}
+.form-input{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+}
+.form-input:focus{
+    outline: none;
+}
+.form-input::placeholder{
+    color: #999;
+}
+.form-btnSubmit{
+    width: 100px;
+    height: 40px;
+    background-color: rgb(44, 44, 46);
+    border: none;
+    border-radius: 10px;
+}
+.list-item{
+    width: 100%;
+    height: 500px;
+    margin: 30px 0;
+    background-color: #fff;
+}
+.item-film{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}

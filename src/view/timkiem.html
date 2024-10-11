@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/header.css">
+    <link rel="stylesheet" href="../public/css/common_style.css">
+    <link rel="stylesheet" href="../public/css/footer.css">
+    <link rel="stylesheet" href="../public/css/media.css">
+    <link rel="stylesheet" href="../public/css/timkiem.css">
+    <link rel="stylesheet" href="../public/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+        <!-- HEADER-MAIN -->
+        <header class="header">
+            <nav class="header-navbar">
+                <div class="header-navbar-bars">
+                    <i id="header-navbar-bars-icon" class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>
+                </div>
+                <div class="header-logo">
+                    <img class="header-logo-img" src="https://phimmoichill2.net/dev/images/logo.png"></img>
+                </div>
+                <div class="header-menu">
+                    <ul class="header-menu-list">
+                        <li class="header-menu-list-item"><a class="header-menu-list-item-link" href=""><span>PHIMMOI</span></a></li>
+                        <li class="header-menu-list-item"><a class="header-menu-list-item-link" href=""><span>PHIM LẺ</span></a></li>
+                        <li class="header-menu-list-item">
+                            <a id="theloai-dropdown" class="header-menu-list-item-link dropdown" href=""><span>THỂ LOẠI</span> <span class="icon-dropdown"><i class="fa-solid fa-caret-down"></i></span></a>
+                            <div class="dropdown-list list-theloai">
+                                <a class="dropdown-list-item-link" href="">Phim Hành Động</a>
+                                <a class="dropdown-list-item-link" href="">Phim Kinh Dị</a>
+                                <a class="dropdown-list-item-link" href="">Phim Tình Cảm</a>
+                                <a class="dropdown-list-item-link" href="">Phim Trinh Thám</a>
+                            </div>
+                        </li>
+                        <li class="header-menu-list-item">
+                            <a id="quocgia-dropdown" class="header-menu-list-item-link dropdown" href=""><span>QUỐC GIA</span> <span class="icon-dropdown"><i class="fa-solid fa-caret-down"></i></a>
+                            <div class="dropdown-list list-quocgia">
+                                <a class="dropdown-list-item-link" href="">Phim Âu Mỹ</a>
+                                <a class="dropdown-list-item-link" href="">Phim Hàn Quốc</a>
+                                <a class="dropdown-list-item-link" href="">Phim Trung Quốc</a>
+                                <a class="dropdown-list-item-link" href="">Phim Thái Lan</a>
+                                <a class="dropdown-list-item-link" href="">Phim Việt Nam</a>
+                            </div>
+                        </li>
+                        <li class="header-menu-list-item"><a class="header-menu-list-item-link" href=""><span>PHIM CHIẾU RẠP</span></a></li>
+                    </ul>
+                </div>
+                <div class="header-form_search">
+                    <input class="header-form_search-input" type="text"
+                        placeholder="Tìm tên phim, diễn viên...">
+                    <i id="header-form_search-click" class="header-form_search-icon fa-solid fa-magnifying-glass fa-lg" style="color: #ffffff;"></i>
+                </div>
+            </nav>
+        </header>
+        <!-- BODY-MAIN -->
+        <div class="main">
+            <div class="main-content">
+                <div class="search">
+                    <form class="form-search" action="">
+                        <i class="form-icon fa-solid fa-magnifying-glass fa-lg" style="color: #ffffff;"></i>
+                        <input class="form-input" type="text" placeholder="Nhập tên phim...">
+                        <button class="form-btnSubmit" type="submit">Tìm kiếm</button>
+                    </form>
+                </div>
+                <div class="list-item">
+                    <div class="row g-5">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="row">
+                                <div class="item-film">
+                                    a
+                                </div>
+                                <div class="item-film">
+                                    b
+                                </div>
+                                <div class="item-film">
+                                    b
+                                </div>
+                                <div class="item-film">
+                                    b
+                                </div>
+                                <div class="item-film">
+                                    b
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>                   
+                </div>
+
+            </div>
+        </div>
+        <!-- FOOTER-MAIN -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-info">
+                    <div class="footer-info-logo">
+                        <img class="footer-info-logo-img" src="https://phimmoichill2.net/dev/images/logo.png" alt="">
+                    </div>
+                    <p class="footer-info-text">Tận hưởng trải nghiệm xem phim mới nhất miễn phí ngay tại phimmoi và
+                        dành
+                        thời gian thư giãn chill cùng gia đình và bạn bè. Với một thư viện phim phong phú</p>
+                </div>
+                <div class="footer-menu">
+                    <div class="footer-menu-block">
+                        <h3 class="footer-menu-block-header">Phim Mới</h3>
+                        <ul class="footer-menu-block-list">
+                            <li class="footer-menu-block-list-item"><a class="footer-menu-block-list-item-link"
+                                    href="">Phim
+                                    chiếu rạp</a></li>
+                            <li class="footer-menu-block-list-item"><a class="footer-menu-block-list-item-link"
+                                    href="">Phim
+                                    lẻ</a></li>
+                            <li class="footer-menu-block-list-item"><a class="footer-menu-block-list-item-link"
+                                    href="">Phim
+                                    hành động</a></li>
+                            <li class="footer-menu-block-list-item"><a class="footer-menu-block-list-item-link"
+                                    href="">Phim
+                                    viễn tưởng</a></li>
+                            <li class="footer-menu-block-list-item"><a class="footer-menu-block-list-item-link"
+                                    href="">Phim
+                                    tâm lý</a></li>
+                            <li class="footer-menu-block-list-item"><a class="footer-menu-block-list-item-link"
+                                    href="">Phim
+                                    hài hước</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu-block">
+                        <h3 class="footer-menu-block-header">Phim Hay</h3>
+                        <ul class="footer-menu-block-list">
+                            <li class="footer-menu-block-list-item"><a class="footer-menu-block-list-item-link"
+                                    href="">Phim
+                                    Mỹ</a></li>
+                            <li class="footer-menu-block-list-item"><a class="footer-menu-block-list-item-link"
+                                    href="">Phim
+                                    Hàn Quốc</a></li>
+                            <li class="footer-menu-block-list-item"><a class="footer-menu-block-list-item-link"
+                                    href="">Phim
+                                    Trung Quốc</a></li>
+                            <li class="footer-menu-block-list-item"><a class="footer-menu-block-list-item-link"
+                                    href="">Phim
+                                    Thái Lan</a></li>
+                            <li class="footer-menu-block-list-item"><a class="footer-menu-block-list-item-link"
+                                    href="">Phim
+                                    Phim Việt Nam</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu-block">
+                        <h3 class="footer-menu-block-header">Phim Hot</h3>
+                        <ul class="footer-menu-block-list">
+                            <li class="footer-menu-block-list-item"><a class="footer-menu-block-list-item-link"
+                                    href="">Về
+                                    chúng tôi</a></li>
+                            <li class="footer-menu-block-list-item"><a class="footer-menu-block-list-item-link"
+                                    href="">Site
+                                    map</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="footer-menu-block">
+                        <h3 class="footer-menu-block-header">Trợ Giúp</h3>
+                        <ul class="footer-menu-block-list">
+                            <li class="footer-menu-block-list-item"><a class="footer-menu-block-list-item-link"
+                                    href="">Hỏi
+                                    đáp</a></li>
+                            <li class="footer-menu-block-list-item"><a class="footer-menu-block-list-item-link"
+                                    href="">Liên
+                                    hệ</a></li>
+                            <li class="footer-menu-block-list-item"><a class="footer-menu-block-list-item-link"
+                                    href="">Tin
+                                    tức</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu-block">
+                        <h3 class="footer-menu-block-header">Thông tin</h3>
+                        <ul class="footer-menu-block-list">
+                            <li class="footer-menu-block-list-item"><a class="footer-menu-block-list-item-link"
+                                    href="">Điều
+                                    khoản sử dụng</a></li>
+                            <li class="footer-menu-block-list-item"><a class="footer-menu-block-list-item-link"
+                                    href="">Chính sách riêng tư</a></li>
+                            <li class="footer-menu-block-list-item"><a class="footer-menu-block-list-item-link"
+                                    href="">Khiếu nại bản quyền</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
