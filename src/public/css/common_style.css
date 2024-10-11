@@ -21,3 +21,37 @@
 .heading3{
     font-size: 16px;
 }
+
+.item_movie{
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    color: #fff;
+}
+.movie_thumbnail{
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 8px;
+}
+.movie_link{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.movie_title{
+    width: 100%;
+    height: 60px;
+}
+.movie_title_name{
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;    
+    -webkit-line-clamp: 2; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 0.8;
+    padding-bottom: 2px;
+}

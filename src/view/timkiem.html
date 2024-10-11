@@ -62,32 +62,72 @@
                 <div class="search">
                     <form class="form-search" action="">
                         <i class="form-icon fa-solid fa-magnifying-glass fa-lg" style="color: #ffffff;"></i>
-                        <input class="form-input" type="text" placeholder="Nhập tên phim...">
+                        <input class="form-input" type="text" placeholder="Nhập tên phim..." autofocus>
                         <button class="form-btnSubmit" type="submit">Tìm kiếm</button>
                     </form>
                 </div>
-                <div class="list-item">
-                    <div class="row g-5">
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="row">
-                                <div class="item-film">
-                                    a
-                                </div>
-                                <div class="item-film">
-                                    b
-                                </div>
-                                <div class="item-film">
-                                    b
-                                </div>
-                                <div class="item-film">
-                                    b
-                                </div>
-                                <div class="item-film">
-                                    b
-                                </div>
+                <div class="list-item container-fluid">
+                    <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+                        <div class="col p-0">
+                            <div class="item_movie">
+                                <div class="movie_thumbnail" style="background-image: url(../public/img/bg2_img.png);">
+                                    <a class="movie_link" href=""></a>    
+                                </div>    
+                                <div class="movie_title">
+                                    <h3 class="movie_title_name"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, nobis repellendus ex placeat ullam natus, officiis facere inventore excepturi sequi ducimus nostrum voluptatem sint perspiciatis non atque dicta incidunt rerum.</span></h3>
+                                </div>                            
                             </div>
                         </div>
-
+                        <div class="col p-0">
+                            <div class="item_movie">
+                                <div class="movie_thumbnail" style="background-image: url(../public/img/bg2_img.png);">
+                                    <a class="movie_link" href=""></a>    
+                                </div>    
+                                <div class="movie_title">
+                                    <h3 class="movie_title_name"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, nobis repellendus ex placeat ullam natus, officiis facere inventore excepturi sequi ducimus nostrum voluptatem sint perspiciatis non atque dicta incidunt rerum.</span></h3>
+                                </div>                            
+                            </div>
+                        </div>
+                        <div class="col p-0">
+                            <div class="item_movie">
+                                <div class="movie_thumbnail" style="background-image: url(../public/img/bg2_img.png);">
+                                    <a class="movie_link" href=""></a>    
+                                </div>    
+                                <div class="movie_title">
+                                    <h3 class="movie_title_name"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, nobis repellendus ex placeat ullam natus, officiis facere inventore excepturi sequi ducimus nostrum voluptatem sint perspiciatis non atque dicta incidunt rerum.</span></h3>
+                                </div>                            
+                            </div>
+                        </div>
+                        <div class="col p-0">
+                            <div class="item_movie">
+                                <div class="movie_thumbnail" style="background-image: url(../public/img/bg2_img.png);">
+                                    <a class="movie_link" href=""></a>    
+                                </div>    
+                                <div class="movie_title">
+                                    <h3 class="movie_title_name"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, nobis repellendus ex placeat ullam natus, officiis facere inventore excepturi sequi ducimus nostrum voluptatem sint perspiciatis non atque dicta incidunt rerum.</span></h3>
+                                </div>                            
+                            </div>
+                        </div>
+                        <div class="col p-0">
+                            <div class="item_movie">
+                                <div class="movie_thumbnail" style="background-image: url(../public/img/bg2_img.png);">
+                                    <a class="movie_link" href=""></a>    
+                                </div>    
+                                <div class="movie_title">
+                                    <h3 class="movie_title_name"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, nobis repellendus ex placeat ullam natus, officiis facere inventore excepturi sequi ducimus nostrum voluptatem sint perspiciatis non atque dicta incidunt rerum.</span></h3>
+                                </div>                            
+                            </div>
+                        </div>
+                        <div class="col p-0">
+                            <div class="item_movie">
+                                <div class="movie_thumbnail" style="background-image: url(../public/img/bg2_img.png);">
+                                    <a class="movie_link" href=""></a>    
+                                </div>    
+                                <div class="movie_title">
+                                    <h3 class="movie_title_name"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, nobis repellendus ex placeat ullam natus, officiis facere inventore excepturi sequi ducimus nostrum voluptatem sint perspiciatis non atque dicta incidunt rerum.</span></h3>
+                                </div>                            
+                            </div>
+                        </div>
                     </div>                   
                 </div>
 
@@ -190,5 +230,20 @@
             </div>
         </footer>
     </div>
+    <script>
+        const btn_search=document.querySelector('.form-btnSubmit')
+        const input_search=document.querySelector('.form-input')
+        input_search.addEventListener('keyup',function(e){
+            btn_search.classList.add('active-btn-search')        
+            if(input_search.value==""){
+                btn_search.classList.remove('active-btn-search')
+            }
+        })
+        btn_search.onclick=function(){
+            if(input_search.value==""){
+                alert('Vui long nhap thong tin de tim kiem!')
+            }
+        }
+    </script>
 </body>
 </html>

@@ -1,4 +1,7 @@
 @media (max-width:820px) {
+    .movie_thumbnail{
+        height: 130px;
+    }
     .swiper-btn{
         height: 126px;
         width: 30px;
