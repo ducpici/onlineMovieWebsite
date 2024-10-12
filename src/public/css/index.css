@@ -2,9 +2,6 @@
     --heiht-item-img:200px
 }
 
-.text-color-orrange{
-    color: var(--main-color);
-}
 .block-item-link{
     width: 100%;
     height: 100%;

@@ -3,12 +3,19 @@
         height: 130px;
     }
     .swiper-btn{
-        height: 126px;
         width: 30px;
     }
-    .swiper-slide-img{
-        width: 225px;
-        height: 126px;
+    .film_large{
+        width: 248px;
+        height: 139px;
+    } 
+    .film_medium{
+        width: 176px;
+        height: 264px;
+    }
+    .film_small{
+        width: 176px;
+        height: 99px;
     }
     .main-content-slider{
         height: 30vh;

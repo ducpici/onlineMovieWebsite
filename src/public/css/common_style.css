@@ -1,5 +1,31 @@
 :root{
-    --main-color: #FF9601; 
+    --main-color: #FF9601;
+    --slide-img-newFilm-width: 350px;
+    --slide-img-newFilm-height: 200px;
+}
+.swiper-slide_large{
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide_medium{
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide_small{
+    width: 100%;
+    height: 100%;
+}
+.film_large{
+    width: 350px;
+    height: 200px;
+} 
+.film_medium{
+    width: 207px;
+    height: 310px;
+}
+.film_small{
+    width: 207px;
+    height: 116px;
 }
 
 .font-weigh-semibold{
@@ -109,16 +135,16 @@
 }
 
 .swiper-slide{
-    width: 350px;
-    height: 100%;
+    /* width: 350px;
+    height: 100%; */
     margin-right: 10px;
     scroll-snap-align: start;
     
 }
 .swiper-slide-img{
     position: relative;
-    height: 200px;
-    width: 350px;
+    /* height: 200px;
+    width: 350px; */
     border-radius: 5px;
     background-position: center center;
     background-size: cover;
@@ -145,7 +171,7 @@
 .swiper-slide-title{
     width: 100%;
     height: 60px;
-    margin: 6px 0;
+    margin: 5px 0;
     line-height: 0;
 }
 .swiper-slide-title-name{
@@ -167,7 +193,7 @@
     position: absolute;
     top: 0;
     width: 50px;
-    height: var(--heiht-item-img);
+    height: calc(100% - 70px);
     display: flex;
     align-items: center;
     justify-content: center;

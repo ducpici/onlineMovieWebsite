@@ -1,8 +1,6 @@
-
 .video{
     width: 100%;
 }
-
 
 .movie-info{
     margin-top: 20px;
@@ -88,6 +86,8 @@
     height: 200px;
     margin: 20px 0;
 }
+
+
 .swiper-slide{
     margin-right: 40px;
 }
@@ -103,16 +103,17 @@
     text-align: center;
     margin: 10px;
 }
-.swiper-slide-title-name{
+.swiper-slide-title-nameActor{
     color: #fff;
     text-decoration: none;
 }
-.swiper-slide-title-name:hover{
+.swiper-slide-title-nameActor:hover{
     color: rgb(255,150,1);
 }
-.horizontal-slider{
-    margin: 20px 0;
-}
+
+
+
+
 .comment{
     width: 100%;
     background-color: white;

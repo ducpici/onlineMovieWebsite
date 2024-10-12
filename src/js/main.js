@@ -1,19 +1,69 @@
+
 //Auto slider
 const slider=document.querySelector('.main-content-slider')
-const items_slider=document.querySelectorAll('.main-content-slider-item')
+var items_slider=document.querySelectorAll('.main-content-slider-item')
 const slider_list=document.querySelector('.main-content-slider-list')
 const dots=document.querySelectorAll('.dot')
 const prev=document.querySelector('.btn-prev')
 const next=document.querySelector('.btn-next')
-const items_length=items_slider.length-1
+var items_length=items_slider.length-1
 let index=0
+
+
+// const list=document.querySelector('.main-content-slider-list')
+
+
+function getData(){
+    fetch('https://phimapi.com/v1/api/danh-sach/phim-le')
+    .then(function(res){
+        return res.json()
+    })
+    .then(function(datas){
+        renderData(datas.data.items)
+    })
+}
+
+function renderData(datas){
+    var html=''
+    datas.map(function(item){
+        html += `<div class="main-content-slider-item" style="background-image: url()">
+                            <div class="main-content-slider-item-infoFilm">           
+                                <h1 class="movie-detail-headingFilm text-2xl text-white fw-semibold">${item.name}</h1>
+                                <ul class="d-flex p-0">
+                                    <li class="movie-detail-item text-white list-unstyled">Mới</li>
+                                    <li class="movie-detail-item text-white">${item.year}</li>
+                                    <li class="movie-detail-item text-white">${item.time}</li>
+                                    <li class="movie-detail-item text-white">${item.category.name}</li>
+                                </ul>
+                                <div class="movie_banner_actions">
+                                    <a class="banner_action_watch" href=""><i class="fa-solid fa-play"></i> Xem ngay</a>
+                                    <div class="movie_banner_action">
+                                        <i class='icon-left movie_banner_action-icon bx bx-heart bx-flip-horizontal' ></i>
+                                    </div>
+                                    <div class="movie_banner_action">
+                                        <i class='icon-right movie_banner_action-icon bx bx-share bx-flip-horizontal' ></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`
+    })
+    slider_list.innerHTML=html
+    items_slider=document.querySelectorAll('.main-content-slider-item')
+    items_length = items_slider.length - 1
+}
+
+
+// getData()
+
+
+
 next.onclick=function(){
     if(index+1 > items_length){
         index=0
     }else{
-       index+=1 
+    index+=1 
     }
-    reloadSlider()
+    reloadSlider()        
 }
 prev.onclick=function(){
     if(index-1 < 0){
@@ -38,7 +88,7 @@ function reloadSlider(){
     clearInterval(autoSlider)
     autoSlider=setInterval(()=>{next.onclick()}, 5000)
 }
-// var autoSlider=setInterval(()=>{next.onclick()}, 5000)
+var autoSlider=setInterval(()=>{next.onclick()}, 5000)
 //End Auto slider
 
 
@@ -97,7 +147,7 @@ for(let i in swiper_btn_prevs){
 function loadSlide(swiper_index, value_px){
     swiper_wrapers[swiper_index].scrollLeft+=value_px
 }
+
 //End Multi swiper and click
 
-
-
+getData()

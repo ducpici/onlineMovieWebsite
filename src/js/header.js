@@ -46,6 +46,6 @@ btn_header_search.onclick=function(){
 
 var avt=document.querySelector('.profile-avatar')
 var user_dropdown=document.querySelector('.user-dropdown')
-avt.onclick=function(){
-    user_dropdown.classList.toggle('display-block')
-}
+// avt.onclick=function(){
+//     user_dropdown.classList.toggle('display-block')
+// }
