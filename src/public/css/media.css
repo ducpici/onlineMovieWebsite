@@ -141,13 +141,13 @@
         height: 134px;
         position: relative;   
     }
-    .main-content-block-listFilm{
+    /* .main-content-block-listFilm{
         display: grid;
         grid-template-columns: auto auto;
         column-gap: 10px;
         row-gap: 10px;
         justify-content: center;
-    }
+    } */
 }
 
 @media (min-width:821px) and (max-width:1400px){
