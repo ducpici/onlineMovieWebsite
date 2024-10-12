@@ -41,11 +41,12 @@
     transition: 0.5s;
 }
 .main-content-slider-item{
-    background-size:cover;
-    background-position: center center;
+    background-size:contain;
+    /* background-position: center; */
     background-repeat: no-repeat;
     position: relative;
-    width: calc(100vw - 20px);
+    /* width: calc(100vw - 20px); */
+    width: 100vw;
     height: 100%;
     transition: 0.5s;
 }

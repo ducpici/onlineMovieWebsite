@@ -8,32 +8,40 @@ const prev=document.querySelector('.btn-prev')
 const next=document.querySelector('.btn-next')
 var items_length=items_slider.length-1
 let index=0
-
-
+const dots_wraper= document.querySelector('.dots-wraper')
+const newFilm=document.getElementById('newFilm')
+const filmBoHot=document.getElementById('filmBoHot')
+const tvShow=document.getElementById('tvShow')
+const filmAnime=document.getElementById('filmAnime')
+const filmAnime_small=document.getElementById('filmAnime-small')
+const filmLeHot=document.getElementById('filmLeHot')
 // const list=document.querySelector('.main-content-slider-list')
 
-
-function getData(){
-    fetch('https://phimapi.com/v1/api/danh-sach/phim-le')
+const api_phimLe='https://phimapi.com/v1/api/danh-sach/phim-le'
+const api_phimAnime='https://phimapi.com/v1/api/danh-sach/hoat-hinh'
+const api_phimBo='https://phimapi.com/v1/api/danh-sach/phim-bo'
+const api_tvShow='https://phimapi.com/v1/api/danh-sach/tv-shows'
+function getData(url_api, e_target){
+    fetch(url_api)
     .then(function(res){
         return res.json()
     })
     .then(function(datas){
-        renderData(datas.data.items)
+        renderData(datas.data, e_target)
     })
 }
 
-function renderData(datas){
+function renderData(datas, element){
     var html=''
-    datas.map(function(item){
-        html += `<div class="main-content-slider-item" style="background-image: url()">
+    datas.items.map(function(data){
+        html += `<div class="main-content-slider-item" style="background-image: url(${datas.APP_DOMAIN_CDN_IMAGE+'/'+data.thumb_url})">
                             <div class="main-content-slider-item-infoFilm">           
-                                <h1 class="movie-detail-headingFilm text-2xl text-white fw-semibold">${item.name}</h1>
+                                <h1 class="movie-detail-headingFilm text-2xl text-white fw-semibold">${data.name}</h1>
                                 <ul class="d-flex p-0">
                                     <li class="movie-detail-item text-white list-unstyled">Mới</li>
-                                    <li class="movie-detail-item text-white">${item.year}</li>
-                                    <li class="movie-detail-item text-white">${item.time}</li>
-                                    <li class="movie-detail-item text-white">${item.category.name}</li>
+                                    <li class="movie-detail-item text-white">${data.year}</li>
+                                    <li class="movie-detail-item text-white">${data.time}</li>
+                                    <li class="movie-detail-item text-white">${data.category[0].name}</li>
                                 </ul>
                                 <div class="movie_banner_actions">
                                     <a class="banner_action_watch" href=""><i class="fa-solid fa-play"></i> Xem ngay</a>
@@ -47,14 +55,70 @@ function renderData(datas){
                             </div>
                         </div>`
     })
-    slider_list.innerHTML=html
+    element.innerHTML=html
     items_slider=document.querySelectorAll('.main-content-slider-item')
     items_length = items_slider.length - 1
 }
 
+function getDataFilmLarge(url_api, e_target){
+    fetch(url_api)
+    .then(function(res){
+        return res.json()
+    })
+    .then(function(datas){
+        renderDataFilmLarge(datas.data, e_target)
+    })
+}
+function renderDataFilmLarge(datas, element){
+    var html=''
+    datas.items.map(function(data){
+        html += `<div class="swiper-slide swiper-slide_large">
+                                <div class="swiper-slide-img film_large" style="background-image: url(${datas.APP_DOMAIN_CDN_IMAGE+'/'+data.thumb_url});"><a class="swiper-slide-img-link" href="" draggable="false"></a><i class="icon-play fa-solid fa-play fa-2xl"></i></div>
+                                <div class="swiper-slide-title"><h3 class="swiper-slide-title-name"><span class="">${data.name}</span></h3></div>
+                            </div>`
+    })
+    element.innerHTML=html
+}
 
-// getData()
+function getDataFilmMedium(url_api, e_target){
+    fetch(url_api)
+    .then(function(res){
+        return res.json()
+    })
+    .then(function(datas){
+        renderDataFilmMedium(datas.data, e_target)
+    })
+}
+function renderDataFilmMedium(datas, element){
+    var html=''
+    datas.items.map(function(data){
+        html += `<div class="swiper-slide swiper-slide_medium">
+                                <div class="swiper-slide-img film_medium" style="background-image: url(${datas.APP_DOMAIN_CDN_IMAGE+'/'+data.poster_url});"><a class="swiper-slide-img-link" href="" draggable="false"></a><i class="icon-play fa-solid fa-play fa-2xl"></i></div>
+                                <div class="swiper-slide-title"><h3 class="swiper-slide-title-name"><span class="">${data.name}</span></h3></div>
+                            </div>`
+    })
+    element.innerHTML=html
+}
 
+function getDataFilmSmall(url_api, e_target){
+    fetch(url_api)
+    .then(function(res){
+        return res.json()
+    })
+    .then(function(datas){
+        renderDataFilmSmall(datas.data, e_target)
+    })
+}
+function renderDataFilmSmall(datas, element){
+    var html=''
+    datas.items.map(function(data){
+        html += `<div class="swiper-slide swiper-slide_small">
+                                <div class="swiper-slide-img film_small" style="background-image: url(${datas.APP_DOMAIN_CDN_IMAGE+'/'+data.thumb_url});"><a class="swiper-slide-img-link" href="" draggable="false"></a><i class="icon-play fa-solid fa-play fa-2xl"></i></div>
+                                <div class="swiper-slide-title"><h3 class="swiper-slide-title-name"><span class="">${data.name}</span></h3></div>
+                            </div>`
+    })
+    element.innerHTML=html
+}
 
 
 next.onclick=function(){
@@ -150,4 +214,10 @@ function loadSlide(swiper_index, value_px){
 
 //End Multi swiper and click
 
-getData()
+getData(api_phimLe, slider_list)
+getDataFilmLarge(api_phimAnime, newFilm)
+getDataFilmMedium(api_phimLe, hotFilm)
+getDataFilmMedium(api_phimBo, filmBoHot)
+getDataFilmLarge(api_tvShow, tvShow)
+getDataFilmMedium(api_phimAnime, filmAnime)
+getDataFilmSmall(api_phimAnime, filmAnime_small)
