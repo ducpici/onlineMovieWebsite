@@ -124,8 +124,8 @@
                         </div>
                     </div>
                     <div class="list-item container-fluid">
-                        <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
-                            <div class="col p-0">
+                        <div id="list_category" class="row row-cols-xl-5 g-2" style="margin: 0 -16px;">
+                            <!-- <div class="col-6 col-md-4 col-lg-3 col-xl-2-4">
                                 <div class="item_movie">
                                     <div class="movie_thumbnail" style="background-image: url(../public/img/bg2_img.png);">
                                         <a class="movie_link" href=""></a>
@@ -135,62 +135,7 @@
                                         <h3 class="movie_title_name"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, nobis repellendus ex placeat ullam natus, officiis facere inventore excepturi sequi ducimus nostrum voluptatem sint perspiciatis non atque dicta incidunt rerum.</span></h3>
                                     </div>                            
                                 </div>
-                            </div>
-                            <div class="col p-0">
-                                <div class="item_movie">
-                                    <div class="movie_thumbnail" style="background-image: url(../public/img/bg2_img.png);">
-                                        <a class="movie_link" href=""></a>
-                                        <i class="icon-play fa-solid fa-play fa-2xl"></i>    
-                                    </div>    
-                                    <div class="movie_title">
-                                        <h3 class="movie_title_name"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, nobis repellendus ex placeat ullam natus, officiis facere inventore excepturi sequi ducimus nostrum voluptatem sint perspiciatis non atque dicta incidunt rerum.</span></h3>
-                                    </div>                            
-                                </div>
-                            </div>
-                            <div class="col p-0">
-                                <div class="item_movie">
-                                    <div class="movie_thumbnail" style="background-image: url(../public/img/bg2_img.png);">
-                                        <a class="movie_link" href=""></a>
-                                        <i class="icon-play fa-solid fa-play fa-2xl"></i>  
-                                    </div>    
-                                    <div class="movie_title">
-                                        <h3 class="movie_title_name"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, nobis repellendus ex placeat ullam natus, officiis facere inventore excepturi sequi ducimus nostrum voluptatem sint perspiciatis non atque dicta incidunt rerum.</span></h3>
-                                    </div>                            
-                                </div>
-                            </div>
-                            <div class="col p-0">
-                                <div class="item_movie">
-                                    <div class="movie_thumbnail" style="background-image: url(../public/img/bg2_img.png);">
-                                        <a class="movie_link" href=""></a>
-                                        <i class="icon-play fa-solid fa-play fa-2xl"></i>    
-                                    </div>    
-                                    <div class="movie_title">
-                                        <h3 class="movie_title_name"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, nobis repellendus ex placeat ullam natus, officiis facere inventore excepturi sequi ducimus nostrum voluptatem sint perspiciatis non atque dicta incidunt rerum.</span></h3>
-                                    </div>                            
-                                </div>
-                            </div>
-                            <div class="col p-0">
-                                <div class="item_movie">
-                                    <div class="movie_thumbnail" style="background-image: url(../public/img/bg2_img.png);">
-                                        <a class="movie_link" href=""></a>
-                                        <i class="icon-play fa-solid fa-play fa-2xl"></i>    
-                                    </div>    
-                                    <div class="movie_title">
-                                        <h3 class="movie_title_name"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, nobis repellendus ex placeat ullam natus, officiis facere inventore excepturi sequi ducimus nostrum voluptatem sint perspiciatis non atque dicta incidunt rerum.</span></h3>
-                                    </div>                            
-                                </div>
-                            </div>
-                            <div class="col p-0">
-                                <div class="item_movie">
-                                    <div class="movie_thumbnail" style="background-image: url(../public/img/bg2_img.png);">
-                                        <a class="movie_link" href=""></a>
-                                        <i class="icon-play fa-solid fa-play fa-2xl"></i>    
-                                    </div>    
-                                    <div class="movie_title">
-                                        <h3 class="movie_title_name"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, nobis repellendus ex placeat ullam natus, officiis facere inventore excepturi sequi ducimus nostrum voluptatem sint perspiciatis non atque dicta incidunt rerum.</span></h3>
-                                    </div>                            
-                                </div>
-                            </div>
+                            </div> -->
                         </div>                   
                     </div>
                     <div class="pagnitation">
@@ -308,5 +253,36 @@
         </footer>
     </div>
     <script src="../js/header.js"></script>
+    <script>
+        const list_category=document.getElementById('list_category')
+        getData()
+        function getData(){
+            fetch('https://phimapi.com/v1/api/danh-sach/tv-shows?page=2')
+            .then(function(res){
+                return res.json()
+            })
+            .then(function(datas){
+                renderData(datas.data)
+            })
+        }
+
+        function renderData(datas){
+            var html=''
+            datas.items.map(function(data){
+                html += `<div class="col-6 col-sm-4 col-md-4 col-lg-3 col-xl-2-4">
+                                <div class="item_movie">
+                                    <div class="movie_thumbnail" style="background-image: url(${datas.APP_DOMAIN_CDN_IMAGE+'/'+data.thumb_url});">
+                                        <a class="movie_link" href=""></a>
+                                        <i class="icon-play fa-solid fa-play fa-2xl"></i>    
+                                    </div>    
+                                    <div class="movie_title">
+                                        <h3 class="movie_title_name"><span>${data.name}</span></h3>
+                                    </div>                            
+                                </div>
+                            </div>`
+            })
+            list_category.innerHTML=html
+        }
+    </script>
 </body>
 </html>

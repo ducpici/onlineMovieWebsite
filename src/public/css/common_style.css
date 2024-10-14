@@ -48,11 +48,14 @@
     font-size: 16px;
 }
 
+
+/*list item movie*/
 .item_movie{
     width: 100%;
     height: auto;
-    padding: 5px;
+    /* padding: 5px; */
     color: #fff;
+    position: relative;
 }
 .movie_thumbnail:hover{
     opacity: 0.7;
@@ -96,7 +99,22 @@
     left: 50%;
     transform: translate(-50%,-50%);
 }
+.icon-movie-del{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+.icon-del{
+    cursor: pointer;
+    transition: 0.5s;
+}
+.icon-del:hover{
+    color: red;
+}
+/*list item movie*/
 
+
+/*Swiper container*/
 .horizontal-slider{
     width: 100%;
     height:auto;
@@ -133,13 +151,11 @@
     scroll-snap-stop: always;
     transition: 0.5s;
 }
-
 .swiper-slide{
     /* width: 350px;
     height: 100%; */
     margin-right: 10px;
-    scroll-snap-align: start;
-    
+    scroll-snap-align: start; 
 }
 .swiper-slide-img{
     position: relative;
@@ -206,3 +222,93 @@
 .swiper-btn-next{
     right: 0;
 }
+/*End swiper container*/
+
+
+/*form search*/
+.search{
+    padding: 30px 0;
+}
+.form-search{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: rgb(21,21,21);
+    padding: 12px 10px;
+}
+.form-search *{
+    margin: 0 5px;
+}
+.form-input{
+    width: 100%;
+    height: 35px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+}
+.form-input:focus{
+    outline: none;
+}
+.form-input::placeholder{
+    color: #999;
+}
+.form-btnSubmit{
+    width: 110px;
+    height: 42px;
+    background-color: rgb(44, 44, 46);
+    border: none;
+    border-radius: 10px;
+    color: #999;
+}
+.list-item{
+    width: 100%;
+    height: auto;
+    /* margin: 30px 0; */
+}
+.item-film{
+    width: 100%;
+    height: 300px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.active-btn-search{
+    color: #000;
+    background-color: var(--main-color);
+    font-weight: 700;
+}
+/*End form search*/
+
+/* Pagnitation*/
+.pagnitation{
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+.pagnitation-list{
+    display: flex;
+    list-style: none;
+}
+.pagnitation-item{
+    margin: 5px;
+}
+.pagnitation-item-link{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    min-width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid gray;
+    background-color: rgb(58, 58, 58);
+    font-weight: 600;
+    font-size: 14px;
+}
+.pagnitation-item-link:hover{
+    color: rgb(255,150,1);
+    border-color: rgb(255,150,1);
+}
+/*End Pagnitation */

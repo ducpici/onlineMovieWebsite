@@ -115,6 +115,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
 } */
+
+/* Pagnitation*/
 .pagnitation{
     margin: 20px 0;
     display: flex;
@@ -145,3 +147,4 @@
     border-color: rgb(255,150,1);
 
 }
+/*End Pagnitation */

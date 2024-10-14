@@ -12,12 +12,13 @@
 .movie-detail-content{
     color: #fff;
     text-align: justify;
-    height: 63px;
+    height: 22px;
     position: relative;
 }
 .movie-detail-content-para{
     height: 100%;
     overflow: hidden;
+    margin: 0;
 }
 .movie-detail-content-more{
     color: #616161;

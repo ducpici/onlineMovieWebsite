@@ -17,10 +17,10 @@ const filmAnime_small=document.getElementById('filmAnime-small')
 const filmLeHot=document.getElementById('filmLeHot')
 // const list=document.querySelector('.main-content-slider-list')
 
-const api_phimLe='https://phimapi.com/v1/api/danh-sach/phim-le'
-const api_phimAnime='https://phimapi.com/v1/api/danh-sach/hoat-hinh'
-const api_phimBo='https://phimapi.com/v1/api/danh-sach/phim-bo'
-const api_tvShow='https://phimapi.com/v1/api/danh-sach/tv-shows'
+const api_phimLe='https://phimapi.com/v1/api/danh-sach/phim-le?page=2'
+const api_phimAnime='https://phimapi.com/v1/api/danh-sach/hoat-hinh?page=2'
+const api_phimBo='https://phimapi.com/v1/api/danh-sach/phim-bo?page=2'
+const api_tvShow='https://phimapi.com/v1/api/danh-sach/tv-shows?page=2'
 function getData(url_api, e_target){
     fetch(url_api)
     .then(function(res){
